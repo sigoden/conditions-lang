@@ -1,17 +1,17 @@
 {
   "name": "conditions-lang",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Boolean language for conditional builds, stages, jobs",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/sigoden/wechatpay.git"
+    "url": "git+https://github.com/sigoden/conditions-lang.git"
   },
   "author": "Sigoden Huang <sigoden@gmail.com> (https://sigoden.com/)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/sigoden/wechatpay/issues"
+    "url": "https://github.com/sigoden/conditions-lang/issues"
   },
-  "homepage": "https://github.com/sigoden/wechatpay#readme",
+  "homepage": "https://github.com/sigoden/conditions-lang#readme",
   "main": "./dist/index.js",
   "scripts": {
     "test": "jest",
