@@ -1,8 +1,8 @@
 {
   "name": "conditions-lang",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Boolean language for conditional builds, stages, jobs",
+  "main": "./dist/index.js",
   "scripts": {
     "test": "jest",
     "build": "tsc",
@@ -10,12 +10,20 @@
     "clean": "rimraf dist",
     "prepublish": "npm run clean && npm run build:prod"
   },
-  "keywords": ["conditions", "boolean", "language", "interpreter"],
+  "keywords": [
+    "condition",
+    "conditions",
+    "condition",
+    "boolean",
+    "language",
+    "interpreter"
+  ],
   "author": "sigoden <sigoden@gmail.com>",
   "license": "ISC",
   "dependencies": {},
   "devDependencies": {
     "@types/jest": "^24.0.11",
+    "@types/node": "^11.13.0",
     "jest": "^24.7.1",
     "ts-jest": "^24.0.2",
     "typescript": "^3.4.2"

@@ -143,9 +143,14 @@ class Parser {
   }
 
   parse(): Ast {
-    return this.maybeCall(() => {
+    const expr =  this.maybeCall(() => {
       return this.maybeBinary(this.parseAtom(), 0);
     });
+    const tok = this.input.peek();
+    if (tok.type === "eof") {
+      return expr;
+    }
+    return this.maybeBinary(expr, 0);
   }
 }
 

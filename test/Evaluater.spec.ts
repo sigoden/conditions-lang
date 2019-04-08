@@ -70,4 +70,5 @@ describe("Evaluate", () => {
   createTest('tag is blank', true);
   createTest('env(foo) IS blank', false);
   createTest('branch is not present', false);
+  createTest('branch IN (foo, bar) AND env(baz) =~ ^baz- OR tag IS present', true, { branch: 'foo', tag: 'v.1.0.0' });
 });

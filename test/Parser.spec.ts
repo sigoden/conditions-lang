@@ -80,4 +80,13 @@ describe("Parser", () => {
  [:or
   [:eq [:var tag] [:var v1]]
   [:eq [:var sudo] [:bool true]]]]`);
+  createTest('branch IN (foo, bar) AND env(baz) =~ ^baz- OR tag IS present', `[:or
+ [:and
+  [:in
+   [:var branch]
+   [[:var foo] [:var bar]]]
+  [:match
+   [:call :env    [[:var baz]]]
+   [:str ^baz-]]]
+ [:is [:var tag] [:present true]]]`);
 });
