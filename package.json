@@ -1,0 +1,23 @@
+{
+  "name": "conditions-lang",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "build": "tsc",
+    "build:prod": "tsc -p tsconfig.prod.json",
+    "clean": "rimraf dist",
+    "prepublish": "npm run clean && npm run build:prod"
+  },
+  "keywords": ["conditions", "boolean", "language", "interpreter"],
+  "author": "sigoden <sigoden@gmail.com>",
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {
+    "@types/jest": "^24.0.11",
+    "jest": "^24.7.1",
+    "ts-jest": "^24.0.2",
+    "typescript": "^3.4.2"
+  }
+}

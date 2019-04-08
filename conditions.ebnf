@@ -1,0 +1,26 @@
+pred = 'present' | 'blank';
+
+eq   = '=' | '==' | '!=';
+re   = '=~' | '~=` | '!~';
+in   = 'in' | 'not in' | 'IN' | 'NOT IN';
+is   = 'is' | 'is not' | 'IS' | 'IS NOT';
+or   = 'or' | 'OR' | '||';
+and  = 'and' | 'AND' | '&&';
+
+list = oprd | oprd ',' list;
+call = iden '(' list ')';
+val  = word | quoted | true | false;
+
+oprd = iden | val | call;
+
+term = oprd is pred
+     | oprd in '(' list ')'
+     | oprd re regx
+     | oprd eq oprd
+     | oprd;
+
+expr = expr or expr
+     | expr and expr
+     | not expr
+     | '(' expr ')'
+     | term
